@@ -9,8 +9,8 @@ from pathlib import Path
 # Add project root to Python path
 project_root = Path(__file__).parent
 sys.path.append(str(project_root))
-# if str(project_root) not in sys.path:
-#     sys.path.insert(0, str(project_root))
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
 
 from config.app_config import APPLICATIONS, UI_CONFIG, NAVIGATION_CONFIG, get_apps_by_category
 from utils.common import (
@@ -180,3 +180,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
